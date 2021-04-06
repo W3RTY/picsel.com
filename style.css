@@ -1,0 +1,155 @@
+:root {
+  font-size: 16px;
+  font-family: OurFont;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --text-h3: #ff4400;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "OurFont";
+  src: url("font.ttf");
+}
+
+main {
+  margin-left: 5rem;
+}
+
+.astext {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: large;
+  color: white;
+  font-family: OurFont;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+body {
+  background-image: url("images/back.gif");
+  background-repeat: repeat;
+
+  font-family: OurFont;
+  font-size: 22px;
+
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: hotpink;
+}
+
+#links {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Text setting */
+h1 {
+  color: var(--text-primary);
+  text-align: center;
+}
+
+h2 {
+  color: var(--text-primary);
+  text-align: center;
+}
+
+h3 {
+  color: var(--text-h3);
+}
+
+p {
+  color: var(--text-secondary);
+  text-align: center;
+}
+/* NAVBAR */
+
+.navbar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 200ms ease;
+}
+
+.bavbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.navbar:hover {
+  width: 20rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+}
+
+/* Icon color */
+
+.fa-primary {
+  color: #ff7eee;
+}
+
+.fa-secondary {
+  color: #df49a6;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
